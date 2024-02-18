@@ -1,6 +1,6 @@
 {
   "name": "cashu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "cashu",
   "main": "src/index.js",
   "scripts": {
