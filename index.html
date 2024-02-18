@@ -8,78 +8,72 @@
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f0f4f8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
         margin: 0;
+        padding: 40px; /* Padding around the container for aesthetics */
       }
       .container {
-        text-align: center;
-        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px; /* Space between columns */
+        max-width: 800px;
+        margin: auto;
+      }
+      .box {
         background-color: #ffffff;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+        padding: 20px;
       }
-      input,
       textarea {
-        width: 100%;
+        width: calc(100% - 20px); /* Full width minus padding */
         padding: 10px;
-        margin-top: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
         box-sizing: border-box;
+        min-height: 350px; /* Minimum height for the text area */
       }
-      button {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #0056b3;
+      .title {
+        margin-bottom: 10px;
+        color: #333;
+        text-align: left;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h2>Cashu Token Decoder</h2>
-      <input
-        id="tokenInput"
-        type="text"
-        placeholder="Paste your Cashu token here"
-      />
-      <button onclick="decodeToken()">Decode</button>
-      <textarea
-        id="resultOutput"
-        rows="10"
-        placeholder="Decoded token will appear here"
-        readonly
-      ></textarea>
+      <div class="box">
+        <div class="title">Encoded</div>
+        <textarea id="encodedInput" placeholder="Paste a token here"></textarea>
+      </div>
+      <div class="box">
+        <div class="title">Decoded</div>
+        <textarea
+          id="decodedOutput"
+          placeholder="Decoded JSON will appear here"
+          readonly
+        ></textarea>
+      </div>
     </div>
 
     <script type="module">
       import { getDecodedToken } from './src/index.js'
 
-      function decodeToken() {
-        const tokenInput = document.getElementById('tokenInput').value
-        try {
-          const decoded = getDecodedToken(tokenInput) // Use the actual decoding logic from the imported function
-          document.getElementById('resultOutput').value = JSON.stringify(
-            decoded,
-            null,
-            2
-          )
-        } catch (e) {
-          document.getElementById('resultOutput').value =
-            'Error decoding token: ' + e.message
-        }
-      }
-
-      window.decodeToken = decodeToken // Expose decodeToken to be accessible from HTML button's onclick event
+      document
+        .getElementById('encodedInput')
+        .addEventListener('input', event => {
+          const encoded = event.target.value
+          try {
+            const decoded = getDecodedToken(encoded)
+            document.getElementById('decodedOutput').value = JSON.stringify(
+              decoded,
+              null,
+              2
+            )
+          } catch (e) {
+            document.getElementById('decodedOutput').value =
+              'Error decoding token: ' + e.message
+          }
+        })
     </script>
   </body>
 </html>
