@@ -50,33 +50,42 @@
         <textarea
           id="decodedOutput"
           placeholder="Decoded JSON will appear here"
-          readonly
         ></textarea>
       </div>
     </div>
 
     <script type="module">
-      import { getDecodedToken } from './src/index.js'
+      import { getDecodedToken, encodeJsonToBase64 } from './src/index.js'
+
+      const encodedInput = document.getElementById('encodedInput')
+      const decodedOutput = document.getElementById('decodedOutput')
 
       function decodeAndUpdate(encoded) {
         try {
           const decoded = getDecodedToken(encoded)
-          document.getElementById('decodedOutput').value = JSON.stringify(
-            decoded,
-            null,
-            2
-          )
+          decodedOutput.value = JSON.stringify(decoded, null, 2)
         } catch (e) {
-          document.getElementById('decodedOutput').value =
-            'Error decoding token: ' + e.message
+          decodedOutput.value = 'Error decoding token: ' + e.message
         }
       }
 
-      document
-        .getElementById('encodedInput')
-        .addEventListener('input', event => {
-          decodeAndUpdate(event.target.value)
-        })
+      function encodeAndUpdate(decoded) {
+        try {
+          const obj = JSON.parse(decoded)
+          const encoded = 'cashuA' + encodeJsonToBase64(obj)
+          encodedInput.value = encoded
+        } catch (e) {
+          encodedInput.value = 'Error encoding JSON: ' + e.message
+        }
+      }
+
+      encodedInput.addEventListener('input', event => {
+        decodeAndUpdate(event.target.value)
+      })
+
+      decodedOutput.addEventListener('keyup', event => {
+        encodeAndUpdate(event.target.value)
+      })
 
       // Parse the URL query string
       window.addEventListener('load', () => {
