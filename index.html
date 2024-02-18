@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cashu Token Decoder</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Cashu Token Decoder</h2>
+      <input
+        id="tokenInput"
+        type="text"
+        placeholder="Paste your Cashu token here"
+      />
+      <button onclick="decodeToken()">Decode</button>
+      <textarea
+        id="resultOutput"
+        rows="10"
+        placeholder="Decoded token will appear here"
+        readonly
+      ></textarea>
+    </div>
+
+    <script type="module">
+      import { getDecodedToken } from './src/index.js'
+
+      function decodeToken() {
+        const tokenInput = document.getElementById('tokenInput').value
+        try {
+          const decoded = getDecodedToken(tokenInput) // Use the actual decoding logic from the imported function
+          document.getElementById('resultOutput').value = JSON.stringify(
+            decoded,
+            null,
+            2
+          )
+        } catch (e) {
+          document.getElementById('resultOutput').value =
+            'Error decoding token: ' + e.message
+        }
+      }
+
+      window.decodeToken = decodeToken // Expose decodeToken to be accessible from HTML button's onclick event
+    </script>
+  </body>
+</html>
