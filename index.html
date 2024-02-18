@@ -58,22 +58,36 @@
     <script type="module">
       import { getDecodedToken } from './src/index.js'
 
+      function decodeAndUpdate(encoded) {
+        try {
+          const decoded = getDecodedToken(encoded)
+          document.getElementById('decodedOutput').value = JSON.stringify(
+            decoded,
+            null,
+            2
+          )
+        } catch (e) {
+          document.getElementById('decodedOutput').value =
+            'Error decoding token: ' + e.message
+        }
+      }
+
       document
         .getElementById('encodedInput')
         .addEventListener('input', event => {
-          const encoded = event.target.value
-          try {
-            const decoded = getDecodedToken(encoded)
-            document.getElementById('decodedOutput').value = JSON.stringify(
-              decoded,
-              null,
-              2
-            )
-          } catch (e) {
-            document.getElementById('decodedOutput').value =
-              'Error decoding token: ' + e.message
-          }
+          decodeAndUpdate(event.target.value)
         })
+
+      // Parse the URL query string
+      window.addEventListener('load', () => {
+        const urlParams = new URLSearchParams(window.location.search)
+        const nut = urlParams.get('nut')
+        if (nut) {
+          const encodedInput = document.getElementById('encodedInput')
+          encodedInput.value = nut
+          decodeAndUpdate(nut)
+        }
+      })
     </script>
   </body>
 </html>
