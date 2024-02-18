@@ -9,12 +9,12 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f0f4f8;
         margin: 0;
-        padding: 40px; /* Padding around the container for aesthetics */
+        padding: 20px; /* Padding around the container for aesthetics */
       }
       .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-        gap: 20px; /* Space between columns */
+        display: flex;
+        flex-direction: column; /* Stack boxes vertically */
+        gap: 20px; /* Space between boxes */
         max-width: 800px;
         margin: auto;
       }
@@ -25,12 +25,12 @@
         padding: 20px;
       }
       textarea {
-        width: calc(100% - 20px); /* Full width minus padding */
+        width: 100%; /* Full width including padding */
         padding: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        min-height: 550px; /* Minimum height for the text area */
+        min-height: 250px; /* Adjusted height for mobile */
       }
       .title {
         margin-bottom: 10px;
@@ -53,7 +53,6 @@
         ></textarea>
       </div>
     </div>
-
     <script type="module">
       import { getDecodedToken, encodeJsonToBase64 } from './src/index.js'
 
