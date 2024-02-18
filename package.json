@@ -1,6 +1,6 @@
 {
   "name": "cashu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "cashu",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,5 @@
     "url": "https://github.com/nostrapps/cashu/issues"
   },
   "homepage": "https://github.com/nostrapps/cashu#readme",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
