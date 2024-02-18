@@ -81,11 +81,11 @@
       // Parse the URL query string
       window.addEventListener('load', () => {
         const urlParams = new URLSearchParams(window.location.search)
-        const nut = urlParams.get('nut')
-        if (nut) {
+        const token = urlParams.get('token')
+        if (token) {
           const encodedInput = document.getElementById('encodedInput')
-          encodedInput.value = nut
-          decodeAndUpdate(nut)
+          encodedInput.value = token
+          decodeAndUpdate(token)
         }
       })
     </script>
