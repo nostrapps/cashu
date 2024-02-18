@@ -1,0 +1,27 @@
+{
+  "name": "cashu",
+  "version": "0.0.0",
+  "description": "cashu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nostrapps/cashu.git"
+  },
+  "keywords": [
+    "nostr",
+    "nostdav",
+    "app"
+  ],
+  "author": "Melvin Carvalho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nostrapps/cashu/issues"
+  },
+  "homepage": "https://github.com/nostrapps/cashu#readme",
+  "dependencies": {
+  }
+}
