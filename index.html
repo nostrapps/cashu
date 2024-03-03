@@ -73,18 +73,26 @@
         ></textarea>
       </div>
     </div>
+
     <script type="module">
       import { getDecodedToken, encodeJsonToBase64 } from './src/index.js'
 
       const encodedInput = document.getElementById('encodedInput')
       const decodedOutput = document.getElementById('decodedOutput')
 
+      function resizeTextarea(textarea) {
+        textarea.style.height = 'auto' // Reset the height
+        textarea.style.height = textarea.scrollHeight + 'px'
+      }
+
       function decodeAndUpdate(encoded) {
         try {
           const decoded = getDecodedToken(encoded)
           decodedOutput.value = JSON.stringify(decoded, null, 2)
+          resizeTextarea(decodedOutput) // Resize after updating content
         } catch (e) {
           decodedOutput.value = 'Error decoding token: ' + e.message
+          resizeTextarea(decodedOutput) // Resize after updating content
         }
       }
 
@@ -93,17 +101,21 @@
           const obj = JSON.parse(decoded)
           const encoded = 'cashuA' + encodeJsonToBase64(obj)
           encodedInput.value = encoded
+          resizeTextarea(encodedInput) // Resize after updating content
         } catch (e) {
           encodedInput.value = 'Error encoding JSON: ' + e.message
+          resizeTextarea(encodedInput) // Resize after updating content
         }
       }
 
       encodedInput.addEventListener('input', event => {
         decodeAndUpdate(event.target.value)
+        resizeTextarea(event.target) // Resize on input
       })
 
       decodedOutput.addEventListener('keyup', event => {
         encodeAndUpdate(event.target.value)
+        resizeTextarea(event.target) // Resize on input
       })
 
       // Parse the URL query string
@@ -111,9 +123,9 @@
         const urlParams = new URLSearchParams(window.location.search)
         const token = urlParams.get('token')
         if (token) {
-          const encodedInput = document.getElementById('encodedInput')
           encodedInput.value = token
           decodeAndUpdate(token)
+          resizeTextarea(encodedInput) // Resize after setting the initial value
         }
       })
     </script>
