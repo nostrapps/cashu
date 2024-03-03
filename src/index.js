@@ -56,7 +56,7 @@ function btoa(b) {
 }
 
 function getDecodedToken(token) {
-  const uriPrefixes = ['web+cashu://', 'cashu://', 'cashu:', 'cashuA']
+  const uriPrefixes = ['urn:voucher:cashu:', 'web+cashu://', 'cashu://', 'cashu:', 'cashuA']
   uriPrefixes.forEach((prefix) => {
     if (token.startsWith(prefix)) {
       token = token.slice(prefix.length)
