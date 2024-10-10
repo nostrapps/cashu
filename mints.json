@@ -1,0 +1,222 @@
+[
+  {
+    "URL": "https://8333.space:3338",
+    "Name": "Cashu test mint",
+    "Balance": 191,
+    "TotalDonated": 315,
+    "UpdatedAt": "10/10/2024, 7:15:59 AM",
+    "State": "active",
+    "Errors": 14,
+    "Mints": 54,
+    "Melts": 63
+  },
+  {
+    "URL": "https://mint.minibits.cash/Bitcoin",
+    "Name": "Minibits mint",
+    "Balance": 121,
+    "TotalDonated": 139,
+    "UpdatedAt": "10/9/2024, 4:58:23 PM",
+    "State": "active",
+    "Errors": 2,
+    "Mints": 61,
+    "Melts": 59
+  },
+  {
+    "URL": "https://stablend.umint.cash",
+    "Name": "Stablend.Umint.Cash",
+    "Balance": 38,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/10/2024, 4:52:44 AM",
+    "State": "active",
+    "Errors": 2,
+    "Mints": 50,
+    "Melts": 41
+  },
+  {
+    "URL": "https://artifiat.cash",
+    "Name": "artifiat mint",
+    "Balance": 55,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/9/2024, 11:06:29 PM",
+    "State": "active",
+    "Errors": 7,
+    "Mints": 30,
+    "Melts": 26
+  },
+  {
+    "URL": "https://mint.nostrich.cc",
+    "Name": "Nostrich.cc mint",
+    "Balance": 6,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/7/2024, 2:19:01 AM",
+    "State": "inactive",
+    "Errors": 11,
+    "Mints": 4,
+    "Melts": 0
+  },
+  {
+    "URL": "https://21mint.me",
+    "Name": "21Mint",
+    "Balance": 63,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/10/2024, 4:37:35 AM",
+    "State": "active",
+    "Errors": 2,
+    "Mints": 54,
+    "Melts": 40
+  },
+  {
+    "URL": "https://mint.nutmix.cash",
+    "Name": "Nutmix Mainnet",
+    "Balance": 106,
+    "TotalDonated": 174,
+    "UpdatedAt": "10/10/2024, 4:52:44 AM",
+    "State": "active",
+    "Errors": 2,
+    "Mints": 58,
+    "Melts": 59
+  },
+  {
+    "URL": "https://mint.macadamia.cash",
+    "Name": "macadamia Mint",
+    "Balance": 16,
+    "TotalDonated": 18,
+    "UpdatedAt": "10/8/2024, 6:18:40 AM",
+    "State": "active",
+    "Errors": 0,
+    "Mints": 26,
+    "Melts": 20
+  },
+  {
+    "URL": "https://mint.lnvoltz.com",
+    "Name": "Voltz Mint",
+    "Balance": 152,
+    "TotalDonated": 304,
+    "UpdatedAt": "10/10/2024, 7:02:42 AM",
+    "State": "active",
+    "Errors": 6,
+    "Mints": 44,
+    "Melts": 58
+  },
+  {
+    "URL": "https://mint.agonist.space",
+    "Name": "Agonist Cashu Mint",
+    "Balance": 123,
+    "TotalDonated": 164,
+    "UpdatedAt": "10/9/2024, 9:37:10 PM",
+    "State": "active",
+    "Errors": 10,
+    "Mints": 24,
+    "Melts": 27
+  },
+  {
+    "URL": "https://mint.bitcoindelta.club",
+    "Name": "Going Offline - BitcoinDelta Cashu Mint",
+    "Balance": 1,
+    "TotalDonated": 10,
+    "UpdatedAt": "10/7/2024, 1:46:17 AM",
+    "State": "inactive",
+    "Errors": 1,
+    "Mints": 0,
+    "Melts": 0
+  },
+  {
+    "URL": "https://mint.coinos.io",
+    "Name": "Coinos",
+    "Balance": 56,
+    "TotalDonated": 66,
+    "UpdatedAt": "10/10/2024, 5:56:46 AM",
+    "State": "inactive",
+    "Errors": 17,
+    "Mints": 18,
+    "Melts": 15
+  },
+  {
+    "URL": "https://mint.0xchat.com",
+    "Name": "0xchat mint",
+    "Balance": 152,
+    "TotalDonated": 263,
+    "UpdatedAt": "10/10/2024, 7:15:59 AM",
+    "State": "active",
+    "Errors": 11,
+    "Mints": 0,
+    "Melts": 17
+  },
+  {
+    "URL": "https://mint.lnwasanee.com",
+    "Name": "lnwAsanee Mint",
+    "Balance": 75,
+    "TotalDonated": 100,
+    "UpdatedAt": "10/9/2024, 10:20:02 PM",
+    "State": "active",
+    "Errors": 6,
+    "Mints": 19,
+    "Melts": 18
+  },
+  {
+    "URL": "https://mint.103100.xyz",
+    "Name": "moksha-mint",
+    "Balance": 64,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/7/2024, 6:26:38 PM",
+    "State": "active",
+    "Errors": 0,
+    "Mints": 0,
+    "Melts": 1
+  },
+  {
+    "URL": "https://cashu.boats",
+    "Name": "Kinda Reckless Mint",
+    "Balance": 111,
+    "TotalDonated": 164,
+    "UpdatedAt": "10/10/2024, 4:22:27 AM",
+    "State": "active",
+    "Errors": 0,
+    "Mints": 49,
+    "Melts": 46
+  },
+  {
+    "URL": "https://mint.gwoq.com",
+    "Name": "Cashu facility",
+    "Balance": 0,
+    "TotalDonated": 0,
+    "UpdatedAt": "10/7/2024, 3:35:34 PM",
+    "State": "unknown",
+    "Errors": 0,
+    "Mints": 0,
+    "Melts": 0
+  },
+  {
+    "URL": "https://smileymoji.cash:3338",
+    "Name": "Smiley Mint",
+    "Balance": 64,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/7/2024, 3:37:47 PM",
+    "State": "unknown",
+    "Errors": 0,
+    "Mints": 0,
+    "Melts": 0
+  },
+  {
+    "URL": "https://mint.belgianbitcoinembassy.org",
+    "Name": "BBE Cashu mint",
+    "Balance": 64,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/9/2024, 9:10:56 PM",
+    "State": "active",
+    "Errors": 4,
+    "Mints": 19,
+    "Melts": 16
+  },
+  {
+    "URL": "https://mint.mountainlake.io",
+    "Name": "Mountainlake M5",
+    "Balance": 61,
+    "TotalDonated": 64,
+    "UpdatedAt": "10/9/2024, 8:59:00 PM",
+    "State": "inactive",
+    "Errors": 10,
+    "Mints": 15,
+    "Melts": 13
+  }
+]
